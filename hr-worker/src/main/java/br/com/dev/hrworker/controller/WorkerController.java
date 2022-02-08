@@ -3,6 +3,7 @@ package br.com.dev.hrworker.controller;
 import br.com.dev.hrworker.service.WorkerService;
 import br.com.dev.hrworker.service.response.WorkerDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

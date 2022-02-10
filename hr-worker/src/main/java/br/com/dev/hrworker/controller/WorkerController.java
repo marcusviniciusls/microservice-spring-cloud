@@ -23,12 +23,12 @@ public class WorkerController {
 
     private static Logger LOOGGER = LoggerFactory.getLogger(WorkerController.class);
 
-    @Value("${test.config}")
-    private String testConfig;
+    //@Value("${test.config}")
+    //private String testConfig;
 
     @GetMapping(value = "/configs")
     public ResponseEntity<Void> getConfigs(){
-        LOOGGER.info("Config" + testConfig);
+        LOOGGER.info("Config TESTE");
         return ResponseEntity.noContent().build();
     }
 

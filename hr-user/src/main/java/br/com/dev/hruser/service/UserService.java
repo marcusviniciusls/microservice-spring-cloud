@@ -16,7 +16,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public UserDto findByEmail(String email){
+    public UserDto findByEmailUser(String email){
         Optional<User> optionalUser = userRepository.findByEmail(email);
         if (optionalUser.isEmpty()){
             throw new ResourceNotFoundException("User Not Found");
@@ -25,6 +25,17 @@ public class UserService {
         UserBusinessRule userBusinessRule = new UserBusinessRule();
         UserDto userDto = userBusinessRule.convertUserInUserDto(user);
         return userDto;
+    }
+
+    public User findByEmail(String email){
+        Optional<User> optionalUser = userRepository.findByEmail(email);
+        if (optionalUser.isEmpty()){
+            throw new ResourceNotFoundException("User Not Found");
+        }
+        User user = optionalUser.get();
+        //UserBusinessRule userBusinessRule = new UserBusinessRule();
+        //UserDto userDto = userBusinessRule.convertUserInUserDto(user);
+        return user;
     }
 
 }

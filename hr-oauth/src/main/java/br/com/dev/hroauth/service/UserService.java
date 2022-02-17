@@ -28,13 +28,13 @@ public class UserService implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email){
-        User user = userFeignClient.findByEmail(email).getBody();
+    public UserDetails loadUserByUsername(String username){
+        User user = userFeignClient.findByEmail(username).getBody();
         if (user == null){
             LOGGER.error("E-mail Not Found");
             throw new UsernameNotFoundException("Email not Found");
         }
-        LOGGER.error("E-mail Found: " + email);
+        LOGGER.error("E-mail Found: " + username);
         return user;
     }
 }

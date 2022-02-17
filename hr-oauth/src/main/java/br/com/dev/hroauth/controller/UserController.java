@@ -18,13 +18,12 @@ public class UserController {
     private UserService userService;
 
     @GetMapping(value = "/search")
-    public ResponseEntity<User> findById(@RequestParam String email){
+    public ResponseEntity<User> findByEmail(@RequestParam String email){
         try{
             User user = userService.findByEmail(email);
             return ResponseEntity.ok(user);
         } catch (IllegalArgumentException illegalArgumentException){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-
     }
 }

@@ -1,3 +1,3 @@
-INSERT INTO TB_WORKER (date_creation, status, name, daily_Income) VALUES (PARSEDATETIME('17-09-2012 18:47:52.69', 'dd-MM-yyyy hh:mm:ss.SS'), true, 'Bob', 200.0);
-INSERT INTO TB_WORKER (date_creation, status, name, daily_Income) VALUES (PARSEDATETIME('17-09-2012 18:47:52.69', 'dd-MM-yyyy hh:mm:ss.SS'), true, 300.0);
-INSERT INTO TB_WORKER (date_creation, status, name, daily_Income) VALUES (PARSEDATETIME('17-09-2012 18:47:52.69', 'dd-MM-yyyy hh:mm:ss.SS'), true,'Alex', 250.0);
+INSERT INTO TB_WORKER (date_creation, status, name, daily_Income) VALUES (TO_TIMESTAMP('17-09-2012 18:47:52.69', 'dd-MM-yyyy hh:mm:ss.SS'), true, 'Bob', 200.0);
+INSERT INTO TB_WORKER (date_creation, status, name, daily_Income) VALUES (TO_TIMESTAMP('17-09-2012 18:47:52.69', 'dd-MM-yyyy hh:mm:ss.SS'), true, 'Marcus Vinicius',300.0);
+INSERT INTO TB_WORKER (date_creation, status, name, daily_Income) VALUES (TO_TIMESTAMP('17-09-2012 18:47:52.69', 'dd-MM-yyyy hh:mm:ss.SS'), true,'Alex', 250.0);
